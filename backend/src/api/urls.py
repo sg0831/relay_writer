@@ -1,7 +1,7 @@
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
-from .views import UserViewSet, GenreViewSet, PostViewSet, PageViewSet
+from .views import UserViewSet, JoinViewSet, GenreViewSet, PostViewSet, PageViewSet
 from rest_framework.routers import DefaultRouter
 
 # User 목록 보여주기
@@ -15,6 +15,15 @@ user_detail = UserViewSet.as_view({
     'put': 'update',
     'delete': 'destroy'
 })
+
+
+
+# SignIn
+signIn_list = JoinViewSet.as_view({
+    'get': 'list',
+    'post': 'create'
+})
+
 
 
 # Genre 목록 보여주기
@@ -59,6 +68,7 @@ page_detail = PageViewSet.as_view({
 router = DefaultRouter()
 # 첫 번째 인자는 url의 prefix, 두 번째 인자는 ViewSet
 router.register('user', UserViewSet)
+router.register('join', JoinViewSet)
 router.register('genre', GenreViewSet)
 router.register('post', PostViewSet)
 router.register('page', PageViewSet)

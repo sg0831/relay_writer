@@ -10,6 +10,12 @@ class UserSerializer( serializers.ModelSerializer ):
 
 
 
+class SignInSerializer( serializers.ModelSerializer ):
+    class Meta:
+        model = User
+        fields = ['id', 'username', 'password']
+
+
 
 class GenreSerializer( serializers.ModelSerializer ):
     class Meta:

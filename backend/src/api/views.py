@@ -1,5 +1,6 @@
+from django.db.models import query
 from django.http import HttpResponse
-from .serializers import UserSerializer, GenreSerializer, PostSerializer, PageSerializer
+from .serializers import UserSerializer, SignInSerializer, GenreSerializer, PostSerializer, PageSerializer
 from rest_framework import viewsets
 from django.contrib import auth
 from .models import User, Genre, Post, Page
@@ -13,6 +14,27 @@ from rest_framework.response import Response
 class UserViewSet(viewsets.ModelViewSet):
     queryset = User.objects.all()
     serializer_class = UserSerializer
+
+
+
+
+class JoinViewSet(viewsets.ModelViewSet):
+    queryset = User.objects.all()
+    serializer_class = SignInSerializer
+    @action(detail=False, methods=['get', 'post'] )
+    def signIn(self, request):
+        if request.method == 'POST':
+            user = self.queryset.get( username = request.POST['username'] )
+            if not user == None:
+                if user.password == request.POST['password']:
+                    auth.login(request, user)
+                    serializer = self.get_serializer(user)
+                    return Response(serializer.data)
+        return Response(status=400)
+    @action( detail=False )
+    def signOut( self, request ):
+        auth.logout( request )
+        return HttpResponse( status=200 )
 
 
 
@@ -35,6 +57,16 @@ class PostViewSet(viewsets.ModelViewSet):
         instance = self.get_object()
         serializer = self.get_serializer(instance.recommended_users.all(), many=True)
         return Response(serializer.data)
+    @action(detail=True)
+    def addRecommend(self, request, pk):
+        instance = self.get_object()
+        instance.recommended_users.add(request.user)
+        return Response(status=200)
+    @action(detail=True)
+    def removeRecommend(self, request, pk):
+        instance = self.get_object()
+        instance.recommended_users.remove(request.user)
+        return Response(status=200)
 
 
 
@@ -46,3 +78,13 @@ class PageViewSet(viewsets.ModelViewSet):
         instance = self.get_object()
         serializer = self.get_serializer(instance.liked_users.all(), many=True)
         return Response(serializer.data)
+    @action(detail=True)
+    def addLike(self, request, pk):
+        instance = self.get_object()
+        instance.liked_users.add(request.user)
+        return Response(status=200)
+    @action(detail=True)
+    def removeLike(self, request, pk):
+        instance = self.get_object()
+        instance.liked_users.remove(request.user)
+        return Response(status=200)

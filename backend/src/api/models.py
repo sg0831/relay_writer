@@ -41,8 +41,4 @@ class Page(models.Model):
     update_count = models.PositiveIntegerField(default=0)
     likes = models.PositiveIntegerField(default=0)
     def __str__(self):
-        return self.post.id + ' ' + self.id
-    def add_likes(self):
-        self.likes += 1
-    def add_update_count(self):
-        self.update_count += 1
+        return self.post.title + ' ' + str(self.id)
