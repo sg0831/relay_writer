@@ -1,45 +1,48 @@
-  * {
+* {
   padding: 0;
-  margin : 0;
-  width: 100%;
-  height: 100%;
+  margin: 0;
+  pont-size: 10px;
 }
 
 
 header {
   display: flex;
-  height: 15%;
-}
-
-
-.logo {
-  margin-right: 90%;
-}
-
-
-.logo img {
-
-}
-
-
-.logo h1 {
-font-size: 100%;
-}
-
-
-.search-button {
-
+  border: 1px solid;
+  width: 100%;
+  height: auto;
 }
 
 
 .drop-menu {
+  height: 2.5rem;
+  width: 2.5rem;
+}
 
+
+/* 로고 이미지+Relay Writer */
+.logo {
+  display: flex ;
+  width: auto;
+}
+
+
+.logo h1 {
+  font-size: 1rem;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 7rem;
+  margin-right: 7rem;
+}
+
+
+.search-button {
+  width: 2.5rem;
 }
 
 
 .main-tab-nav {
   position: fixed;
-  top: 90%;
+  bottom: 0;
 }
 
 
@@ -47,6 +50,7 @@ font-size: 100%;
   display: flex;
   justify-content: center;
   list-style-type: none;
+width: 100%;
 }
 
 
@@ -57,80 +61,185 @@ font-size: 100%;
 
 .main-tab-nav a {
   display: inline-block;
+  width: 100%;
   border: solid;
   text-align: center;
-  font-size: 100%;
+  font-size: 2rem;
   background-color: skyblue;
 }
 
 
 main {
-  width: 100%;
 }
 
 
 .home {
-width: 200%;
+
 }
 
 
-.top10 {
+/* 투데이스 탑10 */
+.home h2 {
+  font-size: 1.5rem;
+  margin-top:0.5rem;
+  margin-left: 0.4rem;
+}
+
+
+/* 제일 큰 거 */
+.home .top10 {
+  display: flex;
+}
+
+
+/* 5개의 이미지+정보 */
+.top10 .top-list {
   display: flex;
   flex-direction: column;
-  width: 300%;
+  width: 50%;
 }
 
 
-.top10 h2 {
-margin-bottom: 1%;
+/* 썸내일+정보 */
+.top10 .top-list .top-list-content {
+  display: flex;
+  margin-bottom: 0.35rem;
 }
 
 
-.top-list {
-display: flex;
-justify-content: center;
-width: 100%;
-height: 20%;
-background-color: yellow;
+/* 썸네일을 감싸고 있는 섹션 */
+.top10 .top-list .top-list-content .thumbnail {
+  margin: 0.3rem;
+  height: 5rem;
+  width: 5rem;
+}
+
+
+/* 건들지 말기 */
+.top10 .top-list .top-list-content .thumbnail img {
+  height: 100%;
+  width: 100%;
+
+}
+
+
+/* 정보 */
+.top10 .top-list .top-list-content .impo {
+  padding-top: 0.2rem;
+  height: 100%;
+  width: 100%;
+  font-size: 0.7rem;
+}
+
+
+/* 정보 안의 제목 */
+.top10 .top-list .top-list-content .impo .impo-title {
+  display: block;
+  font-size: 0.9rem;
 }
 
 
 
+/* 정보 안의 장르 */
+.top10 .top-list .top-list-content .impo .impo-genre {
+  display: block;
+}
 
-.top-list .thumbnail {
+
+/* 정보 안의 조회수 */
+.top10 .top-list .top-list-content .impo .impo-views {
+  font-size: 0.6rem;
+  }
+
+
+/* 정보 안의 추천수 */
+.top10 .top-list .top-list-content .impo .impo-recommends {
+  font-size: 0.6rem;
+}
+
+
+/* 판타지 제목 */
+.title-fantasy {
+  border-top: 1px solid;
+  margin-top: 0.5rem;
+  margin-pottom: 0.1rem;
+  font-size: 1.5rem;
+}
+
+
+/* 판타지 제일 큰거 */
+.fantasy-top10 {
+}
+
+
+/* 건들지 말기 */
+.fantasy-top10 .top-list {
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* 판타지 썸네일+정보 */
+.fantasy-top10 .top-list .top-list-content {
+  display: flex;
+}
+
+
+/* 판타지 썸네일 */
+.fantasy-top10 .top-list .top-list-content .thumbnail {
+  margin: 0.3rem;
+  height: 6rem;
+  width: 6rem;
+}
+
+
+/* 건들지 말기 */
+.fantasy-top10 .top-list .top-list-content .thumbnail img {
+  height: 100%;
   width: 100%;
 }
 
 
-.top-list .impo {
-background-color: green;
-width: 100%;
+/* 판타지 정보 */
+.fantasy-top10 .top-list .top-list-content .impo {
+  padding-top: 0.1rem;
+  height: 4rem;
+  width: 5rem;
 }
 
 
-.top-list .impo a {
-display: inline-block;
-width: 100%;
-height: 10%;
+/* 판타지 정보 안의 제목 */
+.fantasy-top10 .top-list .top-list-content .impo .impo-title {
+  font-size: 1rem;
 }
 
 
-.top-list .impo span {
-
+/* 판타지 정보 안의 장르 */
+.fantasy-top10 .top-list .top-list-content .impo .impo-genre {
+  font-size: 0.85rem;
 }
 
 
-.top-list .impo .recommends {
-
+/* 판타지 정보 안의 조회수 */
+.fantasy-top10 .top-list .top-list-content .impo .impo-views {
+  font-size: 0.7rem;
 }
 
 
-.genre {
+/* 판타지 정보 안의 추천수 */
+.fantasy-top10 .top-list .top-list-content .impo .impo-recommends {
+  font-size: 0.7rem;
+}
+
+
+
+
+.community {
   display: none;
 }
 
 
-.community {
+.more {
   display: none;
 }
 
