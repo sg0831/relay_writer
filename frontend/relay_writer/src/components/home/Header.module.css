@@ -1,0 +1,41 @@
+* {
+  padding: 0;
+  margin: 0;
+  pont-size: 10px;
+}
+
+
+header {
+  display: flex;
+  border: 1px solid;
+  width: 100%;
+  height: auto;
+}
+
+
+.dropMenu {
+  height: 2.5rem;
+  width: 2.5rem;
+}
+
+
+/* 로고 이미지+Relay Writer */
+.logo {
+  display: flex ;
+  width: auto;
+}
+
+
+.logo h1 {
+  font-size: 1rem;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 7rem;
+  margin-right: 7rem;
+}
+
+
+.searchButton {
+  width: 2.5rem;
+}
+
