@@ -34,7 +34,7 @@ display: block;
 
 /* 썸네일을 감싸고 있는 섹션 */
 .top10 .top_list .top_list_content .thumbnail {
-  margin: 0.3rem;
+  margin-left: 0.3rem;
   height: 5rem;
   width: 5rem;
 }
