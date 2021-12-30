@@ -1,0 +1,23 @@
+.page_nav {
+  display: flex;
+  border: 0.1rem solid;
+  width: 100%;
+  height: auto;  
+}
+
+
+.prev_button {
+  height: 0.8rem;
+  width: 0.8rem;
+}
+
+
+.page_num {
+font-size: 0.8rem;
+}
+
+
+.next_button {
+  height: 0.8rem;
+  width: 0.8rem;
+}

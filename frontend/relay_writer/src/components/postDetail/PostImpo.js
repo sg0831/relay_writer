@@ -10,17 +10,17 @@ export default function PostImpo() {
           <img src={thumbnail} alt='Thumbnail' />
         </section>
         <article className={styles.impo}>
-          <span className={styles.impo_title} to="/postDetail/1">라이언 이야기</span>
-          <span className={styles.impo_genre}>[데일리]</span>
+          <section className={ styles.impo_top }>
+            <span className={ styles.title }>라이언 이야기</span>
+            <span className={ styles.genre }>[데일리]</span>
+          </section>
           <section className={styles.impo_score}>
-            <span className={styles.views}>조회수: </span>
-            <span className={styles.recommends}>추천수: </span>
+            <span className={ `${styles.views} ${styles.item}` }>조회수: </span>
+            <span className={ `${styles.recommends} ${styles.item}` }>추천수: </span>
+            <span className={ `${styles.stars} ${styles.item}` }>선호수 : </span>
           </section>
-          <section className={styles.star}>
-            <span>선호수 : </span>
-            <button>선호작품 등록</button>
-          </section>
-        </article>
+          <button className={ styles.star_button }>선호작품 등록</button>
+                  </article>
       </section>
     </div>
   )

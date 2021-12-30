@@ -1,18 +1,28 @@
 .post_header {
-
+  display: flex;
+  border: 1px solid;
+  width: 100%;
+  height: auto;
 }
 
 
 .post_header .back_button {
-
+  height: 2.5rem;
+  width: 2.5rem;
 }
 
 
 .post_header .title {
-
+  font-size: 2.5rem;
+  width: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 7rem;
+  margin-right: 7rem;
 }
 
 
-.post_header .star_button {
-  
+.post_header .writing_button {
+  height: 2.5rem;
+  width: 2.5rem;
 }

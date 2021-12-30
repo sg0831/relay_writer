@@ -4,9 +4,9 @@ import styles from './PostDescription';
 
 export default function PostMenu() {
   return (
-    <div>
+    <div className={ styles.description }>
       <article className={styles.text}>
-        <span>이 글은 테스트를 위한 글입니다.</span>
+        <p>이 글은 테스트를 위한 글입니다.</p>
       </article>
 
       <section className={styles.post_menu}>
