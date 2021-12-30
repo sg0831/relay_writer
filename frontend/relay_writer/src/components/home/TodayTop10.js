@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from './TodayTop10.module.css';
-import thumbnail from './logo_image.jpg';
+import thumbnail from './test_image.jpg';
 
 
 export default function TodayTop10() {
@@ -12,7 +12,7 @@ export default function TodayTop10() {
           <section className={styles.top_list}>
             <section className={ styles.top_list_content }>
               <section className={ styles.thumbnail }>
-                <img src={ thumbnail } alt='Thumbnail' />
+                <img src={ thumbnail } alt='썸네일' />
               </section>
               <section className={ styles.impo }>
                 <Link className={ styles.impo_title } to="/postDetail/1">라이언 이야기</Link>
