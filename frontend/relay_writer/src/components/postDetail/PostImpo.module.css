@@ -4,9 +4,9 @@ display: flex;
 
 
 .post_impo .thumbnail {
-width: 20%;
+width: 6rem;
 height: auto;
-margin: auto 1rem;
+margin: auto 0.3rem;
 }
 
 

@@ -11,12 +11,14 @@
 .recent_list {
   display: flex;
   flex_direction: column;
+  margin-left: 0.4rem;
 }
 
 
 /* 최근목록 썸네일+정보 */
 .recent_list_content {
   display: flex;
+  margin-bottom: 0.3rem;
 }
 
 
@@ -64,4 +66,29 @@
 /* 최근목록 정보 안의 추천수 */
 .recent_list_content .impo .impo_recommends {
   font-size: 0.7rem;
+}
+
+
+/* 해시 태그 모음 */
+.hash_tags {
+  display: flex;
+  justify-content: space-around;
+}
+
+
+/* 해시 태그 하나 */
+.hash_tags .hash_tag {
+  flex: 1;
+}
+
+
+/* More 버튼을 감싸고 있는 section */
+.more_button {
+
+}
+
+
+/* More 버튼 */
+.more_button button {
+
 }
