@@ -1,3 +1,4 @@
+/* 새 글 작성 페이지 헤더 */
 header {
   display: flex;
   border: 0.1rem solid;
@@ -6,18 +7,21 @@ header {
 }
 
 
+/* 왼쪽 상단에 뒤로가기 버튼 */
 .back_button {
   height: 2.5rem;
   width: 2.5rem;
 }
 
 
+/* 가운데 상단에 새 글 쓰기 글씨 */
 h1 {
   font-size: 1rem;
   margin: auto 7rem;
 }
 
 
+/* 오른쪽 상단에 메뉴 버튼 */
 .menu_button {
   height: 2.5rem;
   width: 2.5rem; 

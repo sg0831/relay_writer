@@ -1,3 +1,4 @@
+/* 새 글 제목 */
 .input_title {
   display: flex;
   width: 90%;
@@ -6,6 +7,19 @@
 }
 
 
+/* 제목 글씨 */
+.input_title label {
+
+}
+
+
+/* 제목 입력하는 칸 */
+.input_title input {
+
+}
+
+
+/* 새 글 본문 내용 */
 .input_content {
   width: 90%;
   height: auto;
@@ -13,11 +27,19 @@
 }
 
 
+/* 본문 내용 글씨 */
 .input_content label {
-display: block;
+  display: block;
 }
 
 
+/* 본문 내용 입력 칸 */
+.input_content input {
+
+}
+
+
+/* 작성 완료 버튼 */
 .submit_button {
   display: block;
   font-size: 1.5rem;

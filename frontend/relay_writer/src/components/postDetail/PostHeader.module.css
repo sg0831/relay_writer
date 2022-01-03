@@ -1,3 +1,4 @@
+/* 작품 상세페이지의 헤더 */
 .post_header {
   display: flex;
   border: 1px solid;
@@ -6,12 +7,14 @@
 }
 
 
+/* 왼쪽 상단에 뒤로가기 버튼 */
 .post_header .back_button {
   height: 2.5rem;
   width: 2.5rem;
 }
 
 
+/* 가운데 상단에 작품 제목 */
 .post_header .title {
   font-size: 2.5rem;
   width: auto;
@@ -22,6 +25,7 @@
 }
 
 
+/* 오른쪽 상단에 글쓰기 버튼 */
 .post_header .writing_button {
   height: 2.5rem;
   width: 2.5rem;

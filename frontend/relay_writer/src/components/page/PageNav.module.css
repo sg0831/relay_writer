@@ -1,3 +1,4 @@
+/* 페이지 상단의 네비게이션바 */
 .page_nav {
   display: flex;
   border: 0.1rem solid;
@@ -6,17 +7,20 @@
 }
 
 
+/* 네비게이션바 안에 있는 이전 버튼 */
 .prev_button {
   height: 0.8rem;
   width: 0.8rem;
 }
 
 
+/* 네비게이션바 안에 가운데에 있는 페이지 숫자 */
 .page_num {
 font-size: 0.8rem;
 }
 
 
+/* 네비게이션바 안에 있는 다음 버튼 */
 .next_button {
   height: 0.8rem;
   width: 0.8rem;
