@@ -20,7 +20,7 @@ export default function RecentList() {
     <div>
       {/* 최근 글 목록 */}
       <h2 className={styles.title_recent_list}>최근 글 목록</h2>
-      <article className={styles.recent_list}>
+      {/* <article className={styles.recent_list}>
         {post_list.map((post, index) => (
           <section className={styles.recent_list_content}>
             <section className={styles.thumbnail}>
@@ -48,7 +48,7 @@ export default function RecentList() {
             </section>
           </section>
         ))}
-      </article>
+      </article> */}
     </div>
   )
 }

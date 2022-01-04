@@ -6,7 +6,7 @@ import thumbnail from './logo_image.jpg';
 
 
 export default function TodayTop10() {
-  const url = "http://localhost:8000/api/post/";
+  const url = "localhost:8000/api/user";
   let [post_list, setPost_list ] = useState();
   let left_list = [];
   let right_list = [];
@@ -16,7 +16,7 @@ export default function TodayTop10() {
     async function get() {
       let result = await axios.get(url);
       setPost_list( result );
-      console.log( post_list );
+      alert( post_list );
       // get 응답이 완료된 후 실행
     }
     
