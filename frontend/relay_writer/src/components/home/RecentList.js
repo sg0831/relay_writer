@@ -27,10 +27,14 @@ export default function RecentList() {
               <img src={thumbnail} alt='Thumbnail' />
             </section>
             <section className={styles.impo}>
-              <Link className={styles.impo_title} to="/postDetail/1">{post.title}</Link>
-              <span className={styles.impo_genre}>[{post.genre}]</span>
-              <span className={styles.impo_views}>조회수: {post.views}</span>
-              <span className={styles.impo_recommends}>추천수: {post.recommends}</span>
+              <section className={ styles.impo_top }>
+                <Link className={styles.impo_title} to="/postDetail/1">{post.title}</Link>
+                <span className={styles.impo_genre}>[{post.genre}]</span>
+              </section>
+              <section className={ styles.impo_bottom }>
+                <span className={styles.impo_views}>조회수: {post.views}</span>
+                <span className={styles.impo_recommends}>추천수: {post.recommends}</span>
+              </section>
 
               <section className={styles.hash_tags}>
                 {post.hash_tags.map((tag, index) => (

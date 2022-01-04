@@ -1,14 +1,7 @@
 from django.db import models
-from django.contrib.auth.models import AbstractUser
+from django.contrib.auth.models import User
 from django.conf import settings
 
-
-
-class User(AbstractUser):
-    recommend_list = models.ManyToManyField('Post', related_name='recommended_users', null=True, blank=True)
-    like_list = models.ManyToManyField('Page', related_name='liked_users', null=True, blank=True)
-    def __str__(self):
-        return self.username
 
 
 class Genre(models.Model):
@@ -17,9 +10,11 @@ class Genre(models.Model):
     def __str__(self):
         return self.name
 
+
 class Post(models.Model):
     genre = models.ForeignKey(Genre, related_name='in_posts', on_delete=models.CASCADE)
     title = models.CharField(max_length=100)
+    thumbnail = models.ImageField( blank=True, null=True, upload_to='thumbnail' )
     description = models.TextField(max_length=1000)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
@@ -27,6 +22,10 @@ class Post(models.Model):
     recommends = models.PositiveIntegerField(default=0)
     def __str__(self):
         return self.title
+
+class Recommend(models.Model):
+    user = models.ForeignKey( User, on_delete=models.CASCADE )
+    post = models.ForeignKey( Post, on_delete=models.CASCADE )
 
 
 class Page(models.Model):
@@ -39,6 +38,12 @@ class Page(models.Model):
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
     update_count = models.PositiveIntegerField(default=0)
+    views = models.PositiveIntegerField( default=0 )
     likes = models.PositiveIntegerField(default=0)
     def __str__(self):
         return self.post.title + ' ' + str(self.id)
+
+
+class Like(models.Model):
+    user = models.ForeignKey( User, on_delete=models.CASCADE )
+    page = models.ForeignKey( Page, on_delete=models.CASCADE )

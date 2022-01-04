@@ -1,19 +1,19 @@
 from rest_framework import serializers
-from .models import User, Genre, Post, Page
+from django.contrib.auth.models import User
+from .models import *
 
 
 
 class UserSerializer( serializers.ModelSerializer ):
     class Meta:
         model = User
-        fields = ['id', 'username', 'password', 'recommend_list', 'like_list']
-
+        fields = [ 'username', 'password' ]
 
 
 class SignInSerializer( serializers.ModelSerializer ):
     class Meta:
         model = User
-        fields = ['id', 'username', 'password']
+        fields = [ 'username', 'password' ]
 
 
 
@@ -23,19 +23,16 @@ class GenreSerializer( serializers.ModelSerializer ):
         fields = '__all__'
 
 
-
 class PostSerializer( serializers.ModelSerializer ):
     class Meta:
         model = Post
         fields = '__all__'
 
 
-
-# class RecommendSerializer( serializers.ModelSerializer ):
-    # class Meta:
-    #     model = Recommend
-    #     fields = '__all__'
-
+class RecommendSerializer( serializers.ModelSerializer ):
+    class Meta:
+        model = Recommend
+        fields = '__all__'
 
 
 class PageSerializer( serializers.ModelSerializer ):
@@ -44,8 +41,7 @@ class PageSerializer( serializers.ModelSerializer ):
         fields = '__all__'
 
 
-
-# class LikeSerializer( serializers.ModelSerializer ):
-#     class Meta:
-#         model = Like
-#         fields = '__all__'
+class LikeSerializer( serializers.ModelSerializer ):
+    class Meta:
+        model = Like
+        fields = '__all__'
