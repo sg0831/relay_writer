@@ -1,0 +1,89 @@
+/* 최근목록 제목 */
+.title_recent_list {
+  border-top: 1px solid;
+  margin-top: 0.5rem;
+  margin-pottom: 0.1rem;
+  font-size: 1.5rem;
+}
+
+
+/* 최근목록 제일 큰거 */
+.recent_list {
+  display: flex;
+  flex_direction: column;
+  margin-left: 0.4rem;
+}
+
+
+/* 최근목록 썸네일+정보 */
+.recent_list_content {
+  display: flex;
+  margin-bottom: 0.3rem;
+}
+
+
+/* 최근목록 썸네일 */
+.recent_list_content .thumbnail {
+  margin: 0.3rem;
+  height: 6rem;
+  width: 6rem;
+}
+
+
+/* 건들지 말기 */
+.recent_list_content .thumbnail img {
+  height: 100%;
+  width: 100%;
+}
+
+
+/* 최근목록 정보 */
+.recent_list_content .impo {
+  padding-top: 0.1rem;
+  height: 4rem;
+  width: 5rem;
+}
+
+
+/* 최근목록 정보 안의 제목 */
+.recent_list_content .impo .impo_title {
+  display: inline-block;
+  font-size: 1rem;
+}
+
+
+/* 최근목록 정보 안의 장르 */
+.recent_list_content .impo .impo_genre {
+  font-size: 0.85rem;
+}
+
+
+/* 최근목록 정보 안의 조회수 */
+.recent_list_content .impo .impo_views {
+  font-size: 0.7rem;
+}
+
+
+/* 최근목록 정보 안의 추천수 */
+.recent_list_content .impo .impo_recommends {
+  font-size: 0.7rem;
+}
+
+
+/* 해시 태그 모음 */
+.hash_tags {
+  display: flex;
+  justify-content: space-around;
+}
+
+
+/* 해시 태그 하나 */
+.hash_tags .hash_tag {
+  flex: 1;
+}
+
+
+/* More 버튼 */
+.more_button button {
+
+}

@@ -1,0 +1,36 @@
+* {
+  padding: 0;
+  margin: 0;
+  pont-size: 10px;
+}
+
+
+/* 헤더 */
+header {
+  display: flex;
+  border: 0.1rem solid;
+  width: 100%;
+  height: auto;
+}
+
+
+/* 왼쪽 위의 메뉴 버튼 */
+.dropMenu {
+  height: 2.5rem;
+  width: 2.5rem;
+}
+
+
+/* 화면 상단 중앙의 Relay Riter 타이틀 */
+h1 {
+  font-size: 1rem;
+  margin: auto 7rem;
+}
+
+
+/* 오른쪽 위에 검색 버튼 */
+.searchButton {
+  height: 2.5rem;
+  width: 2.5rem;
+}
+
