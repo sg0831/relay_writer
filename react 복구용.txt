@@ -1,0 +1,53 @@
+  {/* <article className={styles.top10}>
+    //     {/* 왼쪽 */}
+    //     <section className={styles.top_list} >
+    //       { left_list.map((post, index) => (
+    //         <section key={ index } className={styles.top_list_content}>
+    //           <section className={styles.thumbnail}>
+    //             <img src={ post.thumbnail } alt='썸네일' />
+    //           </section>
+    //           <section className={styles.impo}>
+    //             <Link className={styles.impo_title} to="/postDetail/1">{ post.title }</Link>
+    //             <span className={styles.impo_genre}>[{ post.genre }]</span>
+    //             <span className={styles.impo_views}>조회수: { post.views }</span>
+    //             <span className={styles.impo_recommends}>추천수: { post.recommends }</span>
+    //           </section>
+    //         </section>
+    //       ))}
+    //     </section>
+
+    //     {/* 오른쪽 */}
+    //     <section className={styles.top_list} >
+    //       { right_list.map((post, index) => (
+    //         <section key={ index } className={styles.top_list_content}>
+    //           <section className={styles.thumbnail}>
+    //             <img src={thumbnail} alt='썸네일' />
+    //           </section>
+    //           <section className={styles.impo}>
+    //             <Link className={styles.impo_title} to="/postDetail/1">{post.title}</Link>
+    //             <span className={styles.impo_genre}>[{post.genre}]</span>
+    //             <span className={styles.impo_views}>조회수: {post.views}</span>
+    //             <span className={styles.impo_recommends}>추천수: {post.recommends}</span>
+    //           </section>
+    //         </section>
+    //       ))}
+    //     </section>
+      </article> */}
+
+
+
+
+
+
+
+  return () => {
+        // 1위부터 5위까지는 왼쪽
+      //     for ( let i = 0; i < 5; i++ ) {
+      //       left_list.push( post_list[i] );
+      //     }
+      //     // 5위부터 10위까지는 오른쪽
+      //     for ( let i = 5; i < 10; i++ ) {
+      //       right_list.push( post_list[i] );
+      //     }
+      // }
+    };
